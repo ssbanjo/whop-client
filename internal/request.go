@@ -56,7 +56,7 @@ func sendRequest(req *http.Request, resp any) error {
 		return err
 	}
 
-	if !slices.Contains(requestSuccessCodes, res.StatusCode) {
+	if !slices.Contains([]int{200, 201, 204}, res.StatusCode) {
 		return fmt.Errorf("request failed with status code %d: %s", res.StatusCode, string(body))
 	}
 

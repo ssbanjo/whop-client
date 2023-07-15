@@ -27,6 +27,7 @@ func main() {
 
 	whopClient := client.NewClient(apiKey)
 
+
 	// Validate a license key.
 
 	licenseId := "LICENSE_ID"

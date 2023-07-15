@@ -30,7 +30,7 @@ func main() {
 
 	// Validate a license key.
 
-	licenseId := "LICENSE_ID"
+	licenseKey := "LICENSE_KEY"
 
 	metadata := map[string]interface{}{
 		"metadata": map[string]string{
@@ -39,7 +39,7 @@ func main() {
 	}
 
 	membership, err := whopClient.ValidateLicenseKey(
-		licenseId,
+		licenseKey,
 		client.ValidateLicenseKeyParams{
 			Metadata: metadata,
 		},
